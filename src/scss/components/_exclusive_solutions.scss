@@ -1,0 +1,117 @@
+.exclusive-solutions{
+    padding: 50px 20px;
+    .exclusive-solutions-container{
+        max-width: 1140px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @include responsive(md){
+            flex-direction: column;
+        }
+        .image-col{
+            position: relative;
+            width: 47%;
+            @include responsive(sm){
+                width: 100%;
+                margin-bottom: 20px;
+            }
+            .img{
+                position: relative;
+                padding-left: 20px;
+                padding-top: 20px;
+                z-index: 3;
+                width: 100%;
+                height: 100%;
+                &:hover{
+                    transform: translateY(-10px);    
+                }
+                @include responsive(sm){
+                    padding: 0;
+                }
+            }
+            .green-img{
+                position: absolute;
+                z-index: 1;
+                @include responsive(sm){
+                    display: none;
+                }
+            }    
+        }   
+        .text-col{
+            width: 48%;
+            @include responsive(md){
+                width: 100%;
+            }
+            .subtitle{
+                h4{
+                    color: $grey;
+                    font-family: $lexend;
+                    font-size: 16px;
+                    font-weight: 400;
+                    text-transform: uppercase;
+                    @include responsive(sm){
+                        font-size: 14px;
+                        line-height: 23px;
+                    }
+                }    
+            }   
+            .title{
+                margin: 20px 0;
+                h2{
+                    color: $dblue;
+                    font-family: $lexend;
+                    font-size: 33px;
+                    font-weight: 600;
+                    text-transform: capitalize;
+                    @include responsive(sm){
+                        font-size: 24px;
+                        line-height: 23px;
+                    }
+                }    
+            } 
+            .solutions{
+                .solution{
+                    margin-bottom: 20px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    gap: 15px;
+                    &:last-child
+                        {
+                            margin-bottom: 0px;    
+                        }
+                    .img-icon{
+                        img{
+                            width: 60px;
+                            height: 60px;
+                            object-fit: scale-down;
+                        }    
+                    }   
+                    .solution-text{
+                        p{
+                            margin-bottom: 3px;
+                            color: $dblue;
+                            font-family: $lexend;
+                            font-size: 24px;
+                            font-weight: 600;
+                            @include responsive(sm){
+                                font-size: 20px;
+                            }
+                        }
+                        span{
+                            color: $black;
+                            font-family: $lexend;
+                            font-size: 17px;
+                            font-weight: 300;
+                            @include responsive(sm){
+                                font-size: 14px;
+                                line-height: 23px;
+                            }
+                        }    
+                    } 
+                }    
+            }
+        } 
+    }
+}

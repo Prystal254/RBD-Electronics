@@ -1,0 +1,164 @@
+.welcome{
+    padding: 0 20px;
+    .welcome-container{
+        max-width: 1140px;
+        margin: 0 auto;
+        display: flex;
+        padding: 60px 0;
+        justify-content: space-between;
+        align-items: center;
+        @include responsive(md){
+            flex-direction: column-reverse;
+        }
+        .text-col{
+            width: 50%;
+            @include responsive(md){
+                width: 100%;
+            }
+            .subtitle{
+                margin-bottom: 20px;
+                h4{
+                    color: $grey;
+                    font-family: $lexend;
+                    font-weight: 400;
+                    text-transform: uppercase;
+                    font-size: 16px;
+
+                }    
+            }
+            .title{
+                margin-bottom: 20px;
+                h2{
+                   font-family: $lexend;
+                   font-size: 33px;
+                   font-weight: 600;
+                   color: $dblue;
+                   line-height: 1;
+                   @include responsive(sm){
+                        font-size: 20px;
+                   }
+                }    
+            }
+            .subtext{
+                margin-bottom: 30px;
+                p{
+                    color: $black;
+                    font-family: $lexend;
+                    font-weight: 300;
+                    font-size: 18px;
+                    line-height: 28px;
+                    @include responsive(sm){
+                        font-size: 14px;
+                        line-height: 23px;
+                    }
+                    strong{
+                        font-weight: 400;    
+                    }
+                }    
+            }
+            .award-images{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-direction: row-reverse;
+                @include responsive(xs){
+                   display: grid;
+                   grid-template-columns: 1fr 1fr 1fr;
+                   grid-template-rows: 1fr 1fr;
+                }
+                .img-wrap{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    img{
+                        width: 100%;
+                        object-fit: scale-down;
+                        height: 100%;
+                    }    
+                }
+            }
+            .button{
+                margin-top: 35px;
+                a{
+                    padding: 15px 30px;    
+                    display: inline-block;
+                    background: $blue;
+                    font-family: $lexend;
+                    font-size: 15px;
+                    font-weight: 700;
+                    color: $white;
+                    transition: all 0.3s ease;
+                    &:hover{
+                        transform: scale(0.8);   
+                    }    
+                }  
+            }
+        }
+        .image-col{
+            width: 50%;
+            padding: 20px 0 20px 30px;
+            position: relative;
+            @media screen and (max-width:1200px) {
+                padding: 20px 30px 20px 30px;
+            }
+            @include responsive(md){
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 50%;
+            }
+            @include responsive(sm){
+                width: 100%;
+                flex-direction: column;
+            }
+            .welcome-img{
+                width: 100%;
+                height: 100%;
+                &:hover{
+                    transform: translateY(-10px);    
+                }
+            }    
+            .image-content{
+                position: absolute;
+                right: -40px;
+                bottom: 50px;
+                padding: 20px;
+                display: flex;
+                justify-content: space-between;
+                align-items: top;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                background: $white;
+                gap: 12px;
+                @media screen and (max-width:1200px) {
+                    right: -150px;
+                }
+                @include responsive(sm){
+                    position: relative;
+                    top: unset;
+                    right: unset;
+                    width: 80%;
+                }
+                .img-icon{
+                    img{
+                        width: 47px;
+                        height: 47px;
+                    }    
+                }    
+                .img-text{
+                    p{
+                        font-size: 20px;
+                        font-weight: 600;
+                        font-family: $lexend;
+                        color: $altblack;
+                    }
+                    span{
+                        color: $grey;
+                        font-family: $lexend;
+                        font-size: 16px;
+                        font-weight: 300;
+                    }    
+                }
+            }    
+        }
+    }    
+}

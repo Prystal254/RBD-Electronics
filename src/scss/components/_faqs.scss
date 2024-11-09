@@ -1,0 +1,63 @@
+.faqs{
+    padding: 60px 20px;
+    .faqs-container{
+        max-width: 1140px;
+        margin: 0 auto;
+        .faq{
+            margin-bottom: 15px;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.075), 0 6px 10px 0 rgba(0, 0, 0, 0.116);
+            padding: 15px 20px;
+            position: relative;
+            cursor: pointer;
+            .plus{
+                position: absolute;  
+                right: 10px; 
+                top: 10px;
+                color: $black;
+                font-family: $lexend;
+                font-size: 23px;
+                font-weight: 600;
+                transition: all 0.3s ease;
+                &.active{
+                    opacity: 0;
+                    pointer-events: none; 
+                }
+
+            }
+            .minus{
+                opacity: 0;
+                pointer-events: none; 
+                position: absolute;  
+                right: 10px; 
+                top: 10px;
+                color: $blue;
+                font-family: $lexend;
+                font-size: 28px;
+                font-weight: 600;
+                transition: all 0.3s ease;
+                &.active{
+                    opacity: 1;
+                    pointer-events: all;    
+                }
+            }
+            .question{   
+                color: $black;
+                font-family: $lexend;
+                font-size: 21px;
+                font-weight: 600;
+                &.active{
+                    color:$blue;
+                }
+            }
+            .answer{
+                display: none;
+                margin-top: 20px;
+                color: $black;
+                font-family: $lexend;
+                font-size: 17px;
+                font-weight: 400;
+            }    
+        }    
+    }    
+}

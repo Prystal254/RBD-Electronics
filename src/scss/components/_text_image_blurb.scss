@@ -1,0 +1,61 @@
+.tib{
+    padding: 0 20px;
+    &:nth-of-type(odd){
+        .tib-container{
+            flex-direction: row-reverse;    
+            @include responsive(md){
+                flex-direction: column;
+            }
+        }  
+    }
+    .tib-container{
+        max-width: 1140px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row;
+        @include responsive(md){
+            flex-direction: column;
+        }
+        .tib-left-col{
+            width: 48%;
+            @include responsive(md){
+                width: 100%;
+            }
+            h2{
+                color: $dblue;
+                font-family: $lexend;
+                font-size: 28px;
+                font-weight: 600;
+                text-transform: capitalize;
+                line-height: 35px;
+                margin-bottom: 20px;
+                @include responsive(md){
+                    font-size: 20px;
+                }
+            }
+            p{
+                color: $black;
+                font-family: $lexend;
+                font-size: 18px;
+                font-weight: 300;
+                line-height: 27px;
+                @include responsive(md){
+                    font-size: 14px;
+                    line-height: 24px;
+                }
+            }    
+        }
+        .tib-right-col{
+            width: 48%;
+            @include responsive(md){
+                width: 100%;
+            }
+            img{
+                width: 100%;
+                height: 100%;
+            }    
+        }    
+    }    
+}

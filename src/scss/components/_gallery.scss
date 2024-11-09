@@ -1,0 +1,29 @@
+.gallery{
+    padding: 50px 20px;
+    .gallery-container{
+        max-width: 1140px;
+        margin: 0 auto;
+        .gallery-wrap{
+            .single{
+                @include responsive(md){
+                    padding: 20px;
+                }
+                a{
+                    @include responsive(md){
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                    img{
+                        width: 350px;
+                        height: 350px;
+                        object-fit: cover;
+                        @include responsive(md){
+                            width: 100%;
+                        }
+                    }    
+                }    
+            }    
+        }    
+    }
+}

@@ -1,0 +1,122 @@
+.banner{
+    padding: 0 20px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 540px;
+    @include responsive(md){
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .banner-container{
+        max-width: 1140px;
+        margin: 0 auto;
+        padding: 40px 0 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @include responsive(md){
+            flex-direction: column-reverse;
+        }
+        .text-col{
+            width: 50%;
+            @include responsive(md){
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                margin-top: -50px;
+            }
+            @include responsive(sm){
+                margin-top: 20px;
+            }
+            .subtitle{
+                padding: 10px 20px;
+                background-color: #fffFFF24;
+                border-radius: 50px;
+                width: max-content;
+                h4{
+                    font-family: $lexend;
+                    font-size: 14px;
+                    color: $white;
+                    font-weight: 600;
+                    @include responsive(md){
+                        text-align: center;
+                    }
+                }    
+            }
+            .title{
+                margin-top: 15px;
+                margin-bottom: 25px;
+                @include responsive(sm){
+                    margin-top: 10px;
+                    margin-bottom: 15px;
+                }
+                h1{
+                    font-size: 40px;
+                    line-height: 1;
+                    color: $white;
+                    font-family: $lexend;
+                    font-weight: 700;
+                    text-transform: capitalize;
+                    @include responsive(md){
+                        text-align: center;
+                    }
+                    @include responsive(sm){
+                        font-size: 27px;
+                    }
+                }    
+            }    
+            .subtext{
+                p{
+                    font-size: 16px;
+                    font-weight: 400;
+                    font-family: $lexend;
+                    color: $white;
+                    @include responsive(md){
+                        text-align: center;
+                    }
+                    @include responsive(sm){
+                        font-size: 13px;
+                    }
+                }    
+            }
+            .button{
+                margin-top: 40px;
+                a{
+                    padding: 15px 30px;    
+                    display: inline-block;
+                    background: $blue;
+                    font-family: $lexend;
+                    font-size: 15px;
+                    font-weight: 700;
+                    color: $white;
+                    transition: all 0.3s ease;
+                    &:hover{
+                        transform: scale(0.8);   
+                    }    
+                }
+            }
+        }   
+        .image-col{
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            @include responsive(md){
+                width: 100%;
+            }
+            img{
+                width: 680px;
+                height: 470px;    
+                @include responsive(md){
+                    width: 100%;
+                    height: 100%;
+                    object-fit: scale-down;
+                }
+            }
+        } 
+    }    
+}
