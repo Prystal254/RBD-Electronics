@@ -5,6 +5,7 @@
         margin: 0 auto;
         display: flex;
         justify-content: space-between;
+        align-items: flex-start;
         @include responsive(md){
             flex-direction: column;
         }
@@ -220,7 +221,7 @@
                     input[type="email"],
                     input[type="tel"],
                     textarea {
-                        width: 100%;
+                        width: 80%;
                         margin-bottom: 25px;
                         padding-bottom: 20px;
                         border: unset;
@@ -243,7 +244,7 @@
                     }
 
                     select{
-                        width: 112%;
+                        width: 93%;
                         margin-bottom: 25px;
                         padding-bottom: 20px;
                         border: unset;
@@ -295,3 +296,4 @@
         }
     }    
 }
+

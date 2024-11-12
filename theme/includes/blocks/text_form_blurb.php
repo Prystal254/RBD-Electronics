@@ -128,7 +128,7 @@
                 
                 <div class="form-group">
                     <label for="message">Write your message here...</label>
-                    <textarea id="message" name="message" rows="3" placeholer="Write your message here"></textarea>
+                    <textarea id="message" name="message" rows="3" placeholder="Write your message here"></textarea>
                 </div>
                 
                 <div class="form-group file-input">

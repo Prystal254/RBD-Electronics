@@ -53,6 +53,12 @@
             case 'faqs':
               include 'blocks/faqs.php';
               break;
+            case 'blogs_slider':
+              include 'blocks/blogs_slider.php';
+              break;
+            case 'all_blogs':
+              include 'blocks/all_blogs.php';
+              break;
               
           }
         }

@@ -398,6 +398,70 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_673272eabafda": {
+                    "key": "layout_673272eabafda",
+                    "name": "blogs_slider",
+                    "label": "Blogs Slider",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_673272edbafdd",
+                            "label": "field",
+                            "name": "field",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_673272b6d0731"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_673280e6796e6": {
+                    "key": "layout_673280e6796e6",
+                    "name": "all_blogs",
+                    "label": "All Blogs",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_673280e8796e9",
+                            "label": "field",
+                            "name": "field",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_673280b713a88"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "min": "",
@@ -434,5 +498,5 @@
     "active": true,
     "description": "Block Chooser for all content types that will have blocks.",
     "show_in_rest": 0,
-    "modified": 1731132883
+    "modified": 1731363059
 }

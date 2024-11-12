@@ -1,0 +1,104 @@
+.blog-slider{
+    padding: 0 20px;
+    .bs-container{
+        max-width: 1140px;
+        margin: 0 auto;
+        padding: 40px 0;
+        h4{
+            color: $grey;
+            text-align: center;
+            font-family: $lexend;
+            font-size: 16px;
+            font-weight: 400;
+            text-transform: uppercase;
+            @include responsive(sm){
+                font-size: 14px;
+                line-height: 23px;
+            }
+        }
+        h2{
+            color: $dblue;
+            font-family: $lexend;
+            font-size: 33px;
+            text-align: center;
+            margin-bottom: 30px;
+            font-weight: 600;
+            text-transform: capitalize;
+            @include responsive(sm){
+                font-size: 24px;
+                line-height: 23px;
+            }
+        }
+        .bs-wrapper{
+            .slick-track{
+                display: flex;
+                align-items: stretch;
+                .bs-single-slider{
+                    margin: 0 10px;
+                    .bs-ss-wrapper{
+                        background: $white;
+                        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                        .image-container{
+                            width: auto;
+                            overflow: hidden;
+                            height: 250px;
+                            margin-bottom: 20px;
+                            img{
+                                overflow: hidden;
+                                width: 100%;
+                                height: 100%;
+                                object-fit: cover;
+                                transition: all 0.3s ease;
+                                &:hover{
+                                    transform: translateY(-10px);    
+                                }
+                            }    
+                        }   
+                        .title{
+                            margin-bottom: 20px;
+                            padding: 0 20px;
+                            p{
+                                color: $dblue;
+                                font-family: $lexend;
+                                font-size: 20px;
+                                font-weight: 600;
+                                transition: all 0.3s ease;
+                                &:hover{
+                                    color: $green;    
+                                }
+                            }
+                        }
+                        .subtext{
+                            padding: 0 20px 35px;
+                            span{    
+                                color: $black;
+                                font-family: $lexend;
+                                font-size: 16px;
+                                font-weight: 300;
+                            }    
+                        }
+                    }    
+                }   
+            }
+        }    
+        .button{
+            margin: 40px auto 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            a{
+                padding: 15px 30px;    
+                display: inline-block;
+                background: $blue;
+                font-family: $lexend;
+                font-size: 15px;
+                font-weight: 700;
+                color: $white;
+                transition: all 0.3s ease;
+                &:hover{
+                    transform: scale(0.8);   
+                }    
+            }
+        }
+    }    
+}

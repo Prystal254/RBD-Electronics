@@ -1,0 +1,142 @@
+.single-blog{
+    padding: 0 20px;
+    .sb-container{
+        max-width: 1140px;
+        margin: 0 auto;
+        padding: 60px 0px;
+        display: flex;
+        justify-content: space-between;
+        @include responsive(md){
+            flex-direction: column;
+        }
+        .image-col{
+            width: 48%;
+            @include responsive(md){
+                width: 100%;
+                margin-bottom: 30px;
+            }
+            img{
+                width: 100%;
+                
+            }    
+        }   
+        .content-col{
+            width: 50%;
+            @include responsive(md){
+                width: 100%;
+            }
+            .content-wrap{
+                    color: $black;
+                    font-family: $lexend;
+                    font-weight: 300;
+                    font-size: 18px;
+                    line-height: 28px;
+                    @include responsive(md){
+                        font-size: 14px;
+                        line-height: 24px;
+                    }
+                    strong{
+                        font-weight: 400;    
+                    }
+                h2{
+                    color: $black;
+                    margin-bottom: 20px;
+                    font-family: $lexend;
+                    font-size: 40px;
+                    font-weight: 800;
+                    line-height: 48px;
+                    text-transform: capitalize;
+                    @include responsive(md){
+                        font-size: 32px;
+                        line-height: 38px;
+                    }
+                    strong{
+                        color: $black;
+                        font-family: $lexend;
+                        font-size: 40px;
+                        font-weight: 800;
+                        line-height: 48px;
+                        text-transform: capitalize;
+                        @include responsive(md){
+                            font-size: 32px;
+                            line-height: 38px;
+                        }    
+                    }
+                }
+                h3{
+                    margin-top: 20px;
+                    margin-bottom: 20px;
+                    strong{
+                        color: $black;
+                        font-family: $lexend;
+                        font-size: 32px;
+                        font-weight: 700;
+                        line-height: 38px;
+                        text-transform: capitalize;
+                        @include responsive(md){
+                            font-size: 26px;
+                            line-height: 32px;
+                        }    
+                    }
+                    color: $black;
+                    font-family: $lexend;
+                    font-size: 32px;
+                    line-height: 38px;
+                    font-weight: 700;
+                    text-transform: capitalize;
+                    @include responsive(md){
+                        font-size: 26px;
+                        line-height: 32px;
+                    }    
+                }
+                p{
+                    color: $black;
+                    font-family: $lexend;
+                    font-weight: 300;
+                    font-size: 18px;
+                    line-height: 28px;
+                    @include responsive(md){
+                        font-size: 14px;
+                        line-height: 24px;
+                    }
+                    strong{
+                        font-weight: 400;    
+                    }
+                }
+                ul,ol{                
+                    list-style-position: outside;
+                    padding-left: 40px;
+                    li{
+                        color: $black;
+                        font-family: $lexend;
+                        font-weight: 300;
+                        font-size: 18px;
+                        line-height: 28px;
+                        margin-bottom: 15px;
+                        @include responsive(md){
+                            font-size: 14px;
+                            line-height: 24px;
+                        }
+                        strong{
+                            font-weight: 400;    
+                        }      
+                    }
+                }  
+                a{
+                    color: $blue;
+                    text-decoration: underline;
+                }
+                img{
+                    margin: 20px 0;
+                    width: 100%;
+                    height: auto;
+                    object-fit: cover;
+                    transition: all 0.3s ease;
+                    &:hover{
+                        transform: translateY(-15px);
+                    }    
+                }
+            } 
+        } 
+    }    
+}

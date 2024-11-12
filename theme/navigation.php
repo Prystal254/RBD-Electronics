@@ -29,14 +29,14 @@
                         <svg aria-hidden="true" width="30" height="30" class="e-font-icon-svg e-fas-phone-alt" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M497.39 361.8l-112-48a24 24 0 0 0-28 6.9l-49.6 60.6A370.66 370.66 0 0 1 130.6 204.11l60.6-49.6a23.94 23.94 0 0 0 6.9-28l-48-112A24.16 24.16 0 0 0 122.6.61l-104 24A24 24 0 0 0 0 48c0 256.5 207.9 464 464 464a24 24 0 0 0 23.4-18.6l24-104a24.29 24.29 0 0 0-14.01-27.6z"></path></svg>
                         <div class="phone-info ci-info">
                             <p>Phone No</p>
-                            <a href="tel:<?php echo $phone; ?>"><?php echo $phone; ?></a>
+                            <a href="tel:(413) 442-1111">(413) 442-1111</a>
                         </div>
                     </div>
                     <div class="address ci">
                         <svg aria-hidden="true" width="30" height="30" class="e-font-icon-svg e-fas-map-marker-alt" viewBox="0 0 384 512" xmlns="http://www.w3.org/2000/svg"><path d="M172.268 501.67C26.97 291.031 0 269.413 0 192 0 85.961 85.961 0 192 0s192 85.961 192 192c0 77.413-26.97 99.031-172.268 309.67-9.535 13.774-29.93 13.773-39.464 0zM192 272c44.183 0 80-35.817 80-80s-35.817-80-80-80-80 35.817-80 80 35.817 80 80 80z"></path></svg>
                         <div class="address-info ci-info">
                             <p>Address</p>
-                            <a href="#"><?php echo $address; ?></a>
+                            <a href="https://www.google.com/maps/dir//63+Flansburg+Ave+Dalton,+MA+01226+USA/@42.4746344,-73.1728605,12z/data=!4m5!4m4!1m0!1m2!1m1!1s0x89e74bf05bc7f639:0x926cf4439d5eabc3"><?php echo $address; ?></a>
                         </div>
                     </div>
                 </div>
@@ -55,7 +55,7 @@
                 <div class="menu">
                     <?php foreach($navigation as $nav){ ?>
                             <div class="single-link">
-                                <a class="single" href="<?php echo $nav['single_navigation']['url']; ?>"><?php echo $nav['single_navigation']['title']; ?><?php if($nav['has_dropdown']){?> <span>▼</span> <?} ?></a>
+                                <a class="single" href="<?php echo $nav['single_navigation']['url']; ?>"><?php echo $nav['single_navigation']['title']; ?><?php if($nav['has_dropdown']) { ?> <span>▼</span> <?php } ?></a>
                                     <div class="sub-menu">
                                         <?php if($nav['has_dropdown']){ 
                                             foreach($nav['dropdown_links'] as $sublink){
@@ -82,7 +82,7 @@
         <div class="mobile-menu">
             <?php foreach($navigation as $nav){ ?>
                     <div class="sl">
-                        <a class="s" href="<?php echo $nav['single_navigation']['url']; ?>"><?php echo $nav['single_navigation']['title']; ?><?php if($nav['has_dropdown']){?> <span>▼</span> <?} ?></a>
+                        <a class="s" href="<?php echo $nav['single_navigation']['url']; ?>"><?php echo $nav['single_navigation']['title']; ?><?php if($nav['has_dropdown']) { ?> <span>▼</span> <?php } ?></a>
                             <div class="sm">
                                 <?php if($nav['has_dropdown']){ 
                                 foreach($nav['dropdown_links'] as $sublink){
@@ -109,5 +109,13 @@
         $("#cross").click(function(){
             $(".side-menu").removeClass("active");
         });
+        $(".mobile-menu .sl .s span").click(function(event) {
+            event.preventDefault(); // Prevent the <a> link from opening
+            $(".sm").slideToggle();
+            $(".sm").toggleClass("active");
+            console.log("zz")
+        });
+
+
     })
 </script>

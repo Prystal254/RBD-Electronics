@@ -1,0 +1,147 @@
+.all-blogs{
+    padding: 0 20px;
+    .ab-container{
+        max-width: 1140px;
+        margin: 0 auto;
+        padding: 50px 0;
+        .subtitle{
+            color: $grey;
+            text-align: center;
+            font-family: $lexend;
+            font-size: 16px;
+            font-weight: 400;
+            text-transform: uppercase;
+            @include responsive(sm){
+                font-size: 14px;
+                line-height: 23px;
+            }
+        }
+        .title{
+            color: $dblue;
+            font-family: $lexend;
+            font-size: 33px;
+            text-align: center;
+            margin-bottom: 30px;
+            font-weight: 600;
+            text-transform: capitalize;
+            @include responsive(sm){
+                font-size: 24px;
+                line-height: 23px;
+            }
+        }
+        .custom-posts-container{
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 15px;
+            @include responsive(md){
+                grid-row-gap: 20px;
+            }
+            .custom-post{
+                width: 32%;
+                background: $black;
+                position: relative;
+                @include responsive(md){
+                    width: 48%;
+                }
+                @include responsive(xs){
+                    width: 100%;
+                }
+                &:hover{
+                    .post-image{
+                        img{
+                            opacity: 0.7;    
+                        }    
+                    }
+                    .post-content{
+                        max-height: 100%; /* Allow it to expand to the full height of the container */
+                        padding: 20px;
+                        a{
+                            transform: translateY(0);
+                            opacity: 1;
+                        }
+                    }    
+                }
+                .post-image{
+                    position: relative;
+                    z-index: 3;
+                    img{
+                        width: 100%;
+                        height: 300px;
+                        object-fit: cover;
+                        @include responsive(sm){
+                            height: 450px;
+                        }
+                    }    
+                }   
+                .post-content{
+                    position: absolute;
+                    z-index: 5;
+                    width: auto;
+                    height: auto;
+                    max-height: 300px; /* Initially set to the image height */
+                    bottom: 5px;
+                    padding: 20px;
+                    background: rgba(0, 0, 0, 0.7);
+                    transition: max-height 0.4s ease-in-out, padding 0.4s ease-in-out;
+                    @include responsive(sm){
+                        max-height: 450px;
+                    }
+                    h2{
+                        margin-bottom: 20px;
+                        font-size: 20px;
+                        font-family: $lexend;
+                        color: $white;
+                        line-height: 26px;
+                        font-weight: 500;
+                        @include responsive(sm){
+                            font-size: 20px;
+                        }
+                    }
+                    a{
+                        transform: translateY(200px);
+                        opacity: 0;
+                        transition: all 0.3s ease-out;
+                        padding: 10px 20px;
+                        background: rgba(255,255,255,0.6);
+                        font-family: $lexend;    
+                        color: $black;
+                        @include responsive(md){
+                            transform: translateY(0);
+                            opacity: 1;
+                            background: $white;
+                        }
+                        &:hover{
+                            background: $white;    
+                            color: $blue;
+                        }
+                    }    
+                } 
+            }    
+        }    
+        .pagination-container{
+            margin-top: 30px;
+            .page-numbers{
+                display: flex; 
+                list-style: none;     
+                justify-content: center;
+                align-items: center;  
+                gap: 10px;
+                li{
+                    padding: 5px 10px;
+                    border: 1px solid $black;
+                    background: $blue;
+                    color: $white;
+                    transition: all 0.3s ease;
+                    &:hover{
+                        background: $green;
+                            
+                    }
+                }
+                a{
+                    color: $white;    
+                }
+            }
+        }
+    }    
+}

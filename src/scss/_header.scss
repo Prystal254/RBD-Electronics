@@ -222,6 +222,10 @@ header{
                     font-family: $lexend;
                     font-weight: 500;
                     color: $white; 
+                    span{
+                        position: relative;
+                        z-index: 20;    
+                    }
                 }
                 .sm{
                     display: none;
@@ -234,7 +238,9 @@ header{
                         font-size: 15px;
                         font-family: $lexend;
                         font-weight: 500;
-                        color: $white;    
+                        color: $white;   
+                        margin: 10px 0; 
+                        display: block;
                     }
                 }   
             }    
